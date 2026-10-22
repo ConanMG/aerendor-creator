@@ -51,7 +51,7 @@ export function CharacterClassSelector() {
           { displayedClass != undefined ? 
             <div>
               <h2>{displayedClass.name}</h2>
-              <div dangerouslySetInnerHTML={{__html: displayedClass.description}} ></div>
+              <div><pre>{displayedClass.description}</pre></div>
               <h2>Class Features</h2>
               As an {displayedClass.name}, you gain the following benefits.
               <HitPointDisplay className={displayedClass.name} hit_die={displayedClass.hit_point_die_type}/>

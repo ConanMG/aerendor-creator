@@ -17,7 +17,7 @@ export function FeatureSelectableDisplay(props: {options: any}) {
                     );
                 })}
             </select>
-            <div dangerouslySetInnerHTML={{__html: selectedOptionDescription}}></div>
+            <div><pre>{selectedOptionDescription}</pre></div>
         </div>
     )
 }

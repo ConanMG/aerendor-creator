@@ -11,7 +11,7 @@ export function FeatureDisplay(props: {selectedClassFeatures:Feature[][], asi_le
 
         let asiFeature : Feature = {
             "name":"Ability Score Improvement",
-            "description":"<p>You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature.</p>"
+            "description":"You can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can't increase an ability score above 20 using this feature."
         }
 
         let subclassFeature: Feature = {
@@ -58,7 +58,7 @@ export function FeatureDisplay(props: {selectedClassFeatures:Feature[][], asi_le
                             return(
                                 <div key={index}>
                                     <h3>{feature.name}</h3>
-                                    <div dangerouslySetInnerHTML={{__html: feature.description}}></div>
+                                    <div><pre>{feature.description}</pre></div>
                                     {
                                         feature.selectable != undefined ?  <FeatureSelectableDisplay options={feature.selectable}/> 
                                         : <div></div>
